@@ -1,0 +1,146 @@
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5efe6;
+    color: #342c3b;
+}
+
+/* Encabezado */
+header {
+    background-color: #392c4d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+    color: #e4d9f0;
+}
+
+/* Contenido principal */
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+/* Tarjetas de ejercicios */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #e1d6e8;
+}
+
+h2 {
+    color: #624582;
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Formularios */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #c8bfd0;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #a58ac5;
+    border-color: #624582;
+}
+
+/* Botones */
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background-color: #624582;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #392c4d;
+}
+
+/* Resultados */
+#resultadoPocion,
+#resultadoMerienda,
+#resultadoReina {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f4eff9;
+    border-left: 4px solid #8c6bb1;
+    border-radius: 5px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
+/* Pie de página */
+footer {
+    background-color: #392c4d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+}

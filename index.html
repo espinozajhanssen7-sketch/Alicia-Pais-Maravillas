@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alicia en el país de las maravillas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Alicia en el país de las maravillas</h1>
+        <p>Tres desafíos para entrar en un mundo extraordinario.</p>
+    </header>
+
+    <main>
+
+        <!-- EJERCICIO 1 -->
+        <section>
+            <h2>1. La poción mágica de Alicia</h2>
+
+            <p>
+                Alicia encontró una poción mágica. Por cada 1 ml que bebe,
+                su altura aumenta 0,5 cm. La puerta mide 150 cm.
+            </p>
+
+            <form id="formPocion">
+                <label for="alturaInicial">Altura inicial de Alicia (cm):</label>
+                <input type="number" id="alturaInicial" min="1" step="any" required>
+
+                <label for="cantidadPocion">Cantidad de poción (ml, de 1 a 100):</label>
+                <input type="number" id="cantidadPocion" min="1" max="100" step="any" required>
+
+                <button type="submit">Beber poción</button>
+            </form>
+
+            <div id="resultadoPocion" aria-live="polite">
+                Aquí aparecerá el resultado.
+            </div>
+        </section>
+
+        <!-- EJERCICIO 2 -->
+        <section>
+            <h2>2. La merienda del Sombrerero Loco</h2>
+
+            <p>Elige una bebida y la cantidad de tazas que deseas pedir.</p>
+
+            <ul>
+                <li>Té: Bs 5 por taza.</li>
+                <li>Café: Bs 8 por taza.</li>
+                <li>Chocolate: Bs 10 por taza.</li>
+                <li>Jugo: Bs 6 por taza.</li>
+            </ul>
+
+            <p>Si pides 5 tazas o más, recibirás un descuento del 10 %.</p>
+
+            <form id="formMerienda">
+                <label for="nombreCliente">Tu nombre:</label>
+                <input type="text" id="nombreCliente" required>
+
+                <label for="bebida">Selecciona una bebida:</label>
+                <select id="bebida" required>
+                    <option value="">-- Elige una bebida --</option>
+                    <option value="te">Té</option>
+                    <option value="cafe">Café</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="jugo">Jugo</option>
+                </select>
+
+                <label for="cantidadTazas">Cantidad de tazas (de 1 a 20):</label>
+                <input type="number" id="cantidadTazas" min="1" max="20" step="1" required>
+
+                <button type="submit">Calcular pedido</button>
+            </form>
+
+            <div id="resultadoMerienda" aria-live="polite">
+                Aquí aparecerá el detalle de tu pedido.
+            </div>
+        </section>
+
+        <!-- EJERCICIO 3 -->
+        <section>
+            <h2>3. El desafío de la Reina de Corazones</h2>
+
+            <p>
+                La Reina te pide analizar una secuencia de números.
+                Se mostrarán los números pares e impares desde 1 hasta el número elegido.
+            </p>
+
+            <form id="formReina">
+                <label for="limiteNumeros">Ingresa un número entero positivo (de 1 a 100):</label>
+                <input type="number" id="limiteNumeros" min="1" max="100" step="1" required>
+
+                <button type="submit">Aceptar el desafío</button>
+            </form>
+
+            <div id="resultadoReina" aria-live="polite">
+                Aquí aparecerá el análisis de los números.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Actividad práctica de Programación Web I</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
