@@ -97,6 +97,35 @@ El proyecto comprueba que:
 Se verificaron seis casos: altura inválida, poción fuera de rango, pedido con descuento, cantidad de tazas decimal, límite mínimo del desafío y límite superior inválido.
 
 Las evidencias de estas pruebas se incorporarán en la carpeta `evidencias/`.
+### Ejercicio 1: La poción mágica de Alicia
+
+| N.º | Datos de entrada | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| 1 | Altura: 140 cm; poción: 20 ml | Altura final: 150 cm | Correcto |
+| 2 | Altura: 100 cm; poción: 10 ml | Altura final: 105 cm | Correcto |
+| 3 | Altura: 150 cm; poción: 1 ml | Altura final: 150.5 cm | Correcto |
+| 4 | Altura: 0 cm; poción: 10 ml | Rechazar altura inválida | Correcto |
+| 5 | Altura: 140 cm; poción: 101 ml | Rechazar cantidad inválida | Correcto |
+
+### Ejercicio 2: La merienda del Sombrerero Loco
+
+| N.º | Datos de entrada | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| 1 | Alicia; chocolate; 5 tazas | Total: Bs 45 | Correcto |
+| 2 | Alicia; café; 1.5 tazas | Rechazar cantidad no entera | Correcto |
+| 3 | Alicia; té; 1 taza | Total: Bs 5 | Correcto |
+| 4 | Alicia; jugo; 20 tazas | Total: Bs 108 | Correcto |
+| 5 | Nombre vacío; té; 1 taza | Rechazar nombre vacío | Correcto |
+
+### Ejercicio 3: El desafío de la Reina de Corazones
+
+| N.º | Datos de entrada | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| 1 | Límite: 1 | Suma impares: 1; pares: 0 | Correcto |
+| 2 | Límite: 101 | Rechazar límite inválido | Correcto |
+| 3 | Límite: 2 | Suma pares: 2; impares: 1 | Correcto |
+| 4 | Límite: 0 | Rechazar límite inválido | Correcto |
+| 5 | Límite: 5 | Suma pares: 6; impares: 9 | Correcto |
 
 ## 10. Ejecución
 
@@ -108,4 +137,96 @@ Las evidencias de estas pruebas se incorporarán en la carpeta `evidencias/`.
 
 - Página web publicada: [Agregar enlace]
 - Repositorio GitHub: [Agregar enlace]
-- Video de demostración: [Agregar enlace]
+### Ejercicio 1: La poción mágica de Alicia
+
+**Entradas:** altura inicial en centímetros y cantidad de poción en mililitros.
+
+**Procesamiento:** se validan los datos. Luego se calcula la altura final mediante la fórmula:
+
+Altura final = altura inicial + cantidad de poción × 0,5
+
+Finalmente, se compara la altura final con los 150 cm de la puerta.
+
+**Salidas:** altura inicial, cantidad de poción, altura final y mensaje que indica si Alicia alcanza la puerta.
+
+**Variables principales:**
+- `alturaInicial`: altura original de Alicia.
+- `cantidadPocion`: mililitros de poción consumidos.
+- `nuevaAltura`: altura calculada.
+- `mensaje`: indica si Alicia alcanza la puerta.
+
+**Operadores:** `+` suma, `*` multiplica, `<=` y `>=` comparan valores, y `||` permite comprobar varias condiciones.
+
+### Ejercicio 2: La merienda del Sombrerero Loco
+
+**Entradas:** nombre del cliente, bebida seleccionada y cantidad de tazas.
+
+**Procesamiento:** se valida el nombre y la cantidad. La estructura `switch` determina el precio de la bebida. Después se calcula el subtotal, se aplica un descuento del 10 % si se compran cinco tazas o más y se obtiene el total.
+
+**Fórmulas:**
+
+Subtotal = precio por taza × cantidad.
+
+Descuento = subtotal × 0,10, cuando corresponde.
+
+Total = subtotal − descuento.
+
+**Salidas:** nombre, bebida, cantidad, precio unitario, subtotal, descuento y total.
+
+**Variables principales:**
+- `nombre`: nombre del cliente.
+- `bebida`: bebida seleccionada.
+- `cantidad`: número de tazas.
+- `precio`: precio de una taza.
+- `subtotal`, `descuento` y `total`: valores del pedido.
+
+**Operadores:** `*` multiplica, `-` resta, `>=` compara y `||` combina condiciones.
+
+### Ejercicio 3: El desafío de la Reina de Corazones
+
+**Entrada:** número entero entre 1 y 100.
+
+**Procesamiento:** un ciclo `for` recorre los números desde 1 hasta el límite ingresado. El operador `%` permite determinar si cada número es par o impar. Se cuentan los números de cada grupo y se suman sus valores. Finalmente, se comparan las sumas.
+
+**Salidas:** secuencia, números pares e impares, cantidades, sumas y grupo con la suma mayor.
+
+**Variables principales:**
+- `limite`: número máximo de la secuencia.
+- `i`: contador del ciclo.
+- `pares` e `impares`: secuencias de números clasificadas.
+- `cantidadPares` y `cantidadImpares`: contadores.
+- `sumaPares` y `sumaImpares`: acumuladores.
+- `mensaje`: indica qué grupo tiene la suma mayor.
+
+**Operadores:** `%` calcula el resto de una división, `===` compara igualdad estricta, `++` incrementa el contador, `+=` acumula valores y `>` compara las sumas.
+
+## 13. Estructuras y funciones de JavaScript
+
+- `const`: declara variables que no se reasignan, como las referencias a formularios y resultados.
+- `let`: declara variables que pueden cambiar, como contadores, precios y acumuladores.
+- `if`, `else if` y `else`: permiten validar datos y elegir entre diferentes resultados.
+- `switch`: selecciona el precio correspondiente a la bebida.
+- `for`: repite una operación para cada número de la secuencia.
+- `calcularPocion(event)`: valida los datos y calcula la altura final.
+- `calcularMerienda(event)`: valida el pedido y calcula su precio y descuento.
+- `calcularReina(event)`: clasifica, cuenta y suma los números pares e impares.
+
+## 14. Métodos del DOM y eventos
+
+- `document.getElementById()`: obtiene un elemento HTML mediante su identificador.
+- `.value`: lee el valor introducido en un campo o seleccionado en una lista.
+- `.textContent`: escribe el resultado o el mensaje de error dentro de un elemento.
+- `addEventListener()`: ejecuta una función cuando se produce el evento `submit` de un formulario.
+- `preventDefault()`: evita el envío tradicional del formulario y la recarga de la página.
+
+## 15. Errores frecuentes
+
+- Introducir una altura igual o inferior a cero.
+- Introducir una cantidad de poción fuera del intervalo permitido.
+- Dejar vacío el nombre o no seleccionar una bebida.
+- Introducir una cantidad de tazas decimal o fuera del rango permitido.
+- Introducir un límite que no sea un entero entre 1 y 100.
+- Confundir el subtotal con el total después del descuento.
+
+El programa muestra mensajes de error para los datos no válidos y permite volver a realizar cada ejercicio sin recargar la página.
+
