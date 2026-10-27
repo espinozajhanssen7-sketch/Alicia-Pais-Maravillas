@@ -135,8 +135,8 @@ Las evidencias de estas pruebas se incorporarán en la carpeta `evidencias/`.
 
 ## 11. Enlaces de entrega
 
-- Página web publicada: [Agregar enlace]
-- Repositorio GitHub: [Agregar enlace]
+- Página web publicada: https://github.com/espinozajhanssen7-sketch/Alicia-Pais-Maravillas
+- Repositorio GitHub: https://espinozajhanssen7-sketch.github.io/Alicia-Pais-Maravillas/
 ### Ejercicio 1: La poción mágica de Alicia
 
 **Entradas:** altura inicial en centímetros y cantidad de poción en mililitros.
